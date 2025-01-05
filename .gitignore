@@ -1,0 +1,8 @@
+# 環境変数ファイル
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+node_modules/
+.DS_Store
