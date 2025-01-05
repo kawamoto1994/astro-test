@@ -113,7 +113,7 @@ export default {
     function ({ addComponents }) {
       addComponents({
         '.l-content .container': {
-          paddingBlock: '64px',
+          paddingBlock: '48px',
           '@screen md': {
             paddingInline: '32px',
             paddingBlock: '80px',
