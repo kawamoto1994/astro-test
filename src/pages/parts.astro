@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout title="リッチテキスト">
+    <div class="py-6 px-5 md:px-8 min-h-150 md:min-h-200 bg-gray-light rounded-tl-none flex items-center">
+        <div class="container mx-auto">
+            <h1 class="font-medium text-2xl md:text-4xl text-gray-900">H1見出し</h1>
+            <p class="mt-3 md:mt-6">2024/01/05</p>
+        </div>
+    </div>
+
+    <main class="l-content">
+        <div class="container mx-auto">
+            <h2>H2 見出し</h2>
+            <h3>H3 見出し</h3>
+            <h4>H4 見出し</h4>
+            <h5>H5 見出し</h5>
+    
+            <p>通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト通常テキスト<a href="">リンク</a></p>
+    
+            <ul>
+                <li>リスト項目 1</li>
+                <li>リスト項目 2</li>
+                <li>リスト項目 3</li>
+            </ul>
+    
+            <ol>
+                <li>番号付きリスト項目 1</li>
+                <li>番号付きリスト項目 2</li>
+                <li>番号付きリスト項目 3</li>
+            </ol>
+                
+        </div>
+    </main>
+</BaseLayout>

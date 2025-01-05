@@ -1,0 +1,12 @@
+---
+const { label, href, onClick, type = "button" } = Astro.props;
+---
+{href !== "" ? (
+    <a href={href} class="inline-block px-7 pt-3 pb-4 bg-transparent border border-primary-dark text-primary-dark rounded-lg hover:bg-gray-light">
+        {label}
+    </a>
+) : (
+    <button type="button" class="inline-block px-7 pt-3 pb-4 bg-transparent border border-primary-dark text-primary-dark rounded-lg hover:bg-gray-light" onClick={onClick}>
+        {label}
+    </button>
+)}

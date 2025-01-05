@@ -1,0 +1,10 @@
+---
+const { link, title, description } = Astro.props;
+---
+<a href={link} class="block">
+    <div>
+        <img src="https://placehold.jp/600x400.png" alt="サンプル画像" class="w-full">
+    </div>
+    <p class="font-medium text-black">{title}</p>
+    <p class="text-sm text-gray">{description}</p>
+</a>

@@ -1,6 +1,20 @@
 ---
-
-const serviceDomain = import.meta.env.VITE_MICROCMS_SERVICE_DOMAIN;
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
 ---
-<h1>Welcome to {serviceDomain}!</h1>
+
+<BaseLayout title="トップページ">
+
+    <main class="l-content">
+        <div class="container mx-auto">
+            <h1 class="mb-11 md:mb-10 text-center text-5xl md:text-6xl font-Montserrat text-primary">Mocchify</h1>
+    
+            <p>紹介文が入ります</p>
+            
+            <div class="mt-6 md:mt-8">
+                <Button label="ブログに移動する" href="/blog/"></Button>
+            </div>
+                
+        </div>
+    </main>
+</BaseLayout>

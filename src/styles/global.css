@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,500&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply text-black font-sans font-normal;
+    }
+}
+
+@layer components {
+    .container > :first-child {
+        margin-top: 0;
+    }
+
+    h2 {
+        @apply text-2xl md:text-4xl font-medium text-black my-8 border-b border-gray-light pb-4;
+    }
+
+    h3 {
+        @apply text-xl md:text-3xl font-medium text-black my-6;
+    }
+
+    h4 {
+        @apply text-lg md:text-2xl font-medium text-black my-6;
+    }
+
+    h5 {
+        @apply md:text-xl font-medium text-black my-6;
+    }
+
+    ul {
+        @apply mt-6 list-disc pl-6 text-gray space-y-4;
+    }
+
+    ol {
+        @apply mt-6 list-decimal pl-6 text-gray space-y-4;
+    }
+
+
+    h2 + *,
+    h3 + *,
+    h4 + *,
+    h5 + *,
+    h6 + * {
+        margin-top: 0 !important;
+    }
+
+    p {
+        @apply mt-6;
+
+        + p {
+            @apply mt-3;
+        }
+    }
+
+    p a {
+        @apply text-indigo underline;
+    }
+
+    .c-grid .c-grid__item > :first-child {
+        margin-top: 0;
+    }
+}

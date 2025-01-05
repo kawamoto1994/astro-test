@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "https://zenn.dev/arsaga/articles/bfe2ff5b6ee7a9",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preview": "astro preview"
   },
   "keywords": [],
-  "author": "",
+  "author": "kawamoto",
   "license": "ISC",
   "dependencies": {
     "astro": "^5.1.2",
