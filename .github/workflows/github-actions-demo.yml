@@ -16,3 +16,14 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+name: Build the site
+on:
+  repository_dispatch:
+    types: [microcms_update]
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run build
+        run: npm run build
