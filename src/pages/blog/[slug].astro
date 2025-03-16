@@ -1,7 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const { slug } = Astro.params;
---
+
+export async function getStaticPaths() {
+    return [
+      // { params: { /* required */ }, props: { /* optional */ } },
+      { params: { slug: '1' } }, // [slug] is the parameter
+      { params: { slug: '2' } }, // must match the file name
+      // ...
+    ];
+}
+---
 <BaseLayout title={`記事: ${slug}`}>
     <div class="py-6 px-5 md:px-8 min-h-150 md:min-h-200 bg-gray-light rounded-tl-none flex items-center">
         <div class="container mx-auto">
@@ -10,13 +19,7 @@ const { slug } = Astro.params;
     </div>
     <main class="l-content">
         <div class="container mx-auto">
-            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                {articles.map(article => (
-                    <li>
-                        <Card {...article} />
-                    </li>
-                ))}
-            </ul>
+            記事の内容が入る
         </div>
     </main>
 </BaseLayout>
