@@ -25,5 +25,6 @@ jobs:
   create-release:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - name: Run build
         run: npm run build
