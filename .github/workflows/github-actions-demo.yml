@@ -11,11 +11,12 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - name: Run build
         run: npm run build
-        uses: SamKirkland/FTP-Deploy-Action@2.0.0   # FTPを使ってサーバーにDeployするアクションを実行
-        env:                                        # FTP環境の設定を行う
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}     # FTPサーバーのURLを設定
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }} # FTPのユーザー名を設定
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} # FTPのパスワードを設定
-          LOCAL_DIR: dist                           # どのディレクトリのデータをアップロードするか
-          REMOTE_DIR: /home/mocchify/       # リモートのどのディレクトリにアップロードするか
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@2.0.0
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          LOCAL_DIR: dist
+          REMOTE_DIR: /home/mocchify/
           ARGS: --delete
