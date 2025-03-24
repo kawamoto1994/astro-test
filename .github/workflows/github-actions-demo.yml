@@ -15,6 +15,8 @@ jobs:
         run: ls -la
       - name: Make astro executable
         run: chmod +x node_modules/.bin/astro
+      - name: Install dependencies
+        run: npm install
       - name: Run build
         run: npm run build
       - name: Deploy via FTP
