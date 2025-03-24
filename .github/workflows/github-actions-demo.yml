@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: List directory contents
+        run: ls -la
       - name: Run build
         run: npm run build
       - name: Deploy via FTP
